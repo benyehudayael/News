@@ -5,16 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { FooterComponent } from './footer/footer.component';
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
+import { NewsComponent } from './news/news.component';
+import { SportComponent } from './sport/sport.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopMenuComponent,
     FooterComponent,
-    FirstComponent,
-    SecondComponent
+    NewsComponent,
+    SportComponent
   ],
   imports: [
     BrowserModule,
