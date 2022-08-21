@@ -7,6 +7,12 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
 import { SportComponent } from './sport/sport.component';
+import { ReelComponent } from './reel/reel.component';
+import { HomeComponent } from './home/home.component';
+import { WorklifeComponent } from './worklife/worklife.component';
+import { TravelComponent } from './travel/travel.component';
+import { FutureComponent } from './future/future.component';
+import { CultureComponent } from './culture/culture.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +20,13 @@ import { SportComponent } from './sport/sport.component';
     TopMenuComponent,
     FooterComponent,
     NewsComponent,
-    SportComponent
+    SportComponent,
+    ReelComponent,
+    HomeComponent,
+    WorklifeComponent,
+    TravelComponent,
+    FutureComponent,
+    CultureComponent
   ],
   imports: [
     BrowserModule,
