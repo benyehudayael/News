@@ -13,6 +13,8 @@ import { WorklifeComponent } from './worklife/worklife.component';
 import { TravelComponent } from './travel/travel.component';
 import { FutureComponent } from './future/future.component';
 import { CultureComponent } from './culture/culture.component';
+import { SearchComponent } from './search/search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { CultureComponent } from './culture/culture.component';
     WorklifeComponent,
     TravelComponent,
     FutureComponent,
-    CultureComponent
+    CultureComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

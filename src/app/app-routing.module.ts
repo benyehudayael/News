@@ -5,6 +5,7 @@ import { FutureComponent } from './future/future.component';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
 import { ReelComponent } from './reel/reel.component';
+import { SearchComponent } from './search/search.component';
 import { SportComponent } from './sport/sport.component';
 import { TravelComponent } from './travel/travel.component';
 import { WorklifeComponent } from './worklife/worklife.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'worklife', component: WorklifeComponent },
   { path: 'travel', component: TravelComponent },
   { path: 'future', component: FutureComponent },
-  { path: 'culture', component: CultureComponent }
+  { path: 'culture', component: CultureComponent },
+  { path: 'search', component: SearchComponent }
 ];
 
 @NgModule({

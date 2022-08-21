@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Item } from 'src/model/item';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getItems() {
-
+  getItems() : Observable<Item[]> {
+    return this.http.get<Item[]>('https://localhost:7071/api/item?pageSize=10&pageIndex=1');
   }
 }

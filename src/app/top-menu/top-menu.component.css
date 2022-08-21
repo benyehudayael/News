@@ -13,6 +13,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    align-content: center;
   }
   .topnav a:hover {
     background-color: #ddd;
@@ -22,3 +23,11 @@ body {
     background-color: #055291;
     color: white;
   }
+  #searchIcon{
+  
+     float: right;
+     margin-right: 2rem;
+     /*background-image: url("yael-news\src\assets\icons8-search.gif");*/
+  }
+  
+  
