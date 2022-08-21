@@ -15,6 +15,7 @@ import { FutureComponent } from './future/future.component';
 import { CultureComponent } from './culture/culture.component';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     TravelComponent,
     FutureComponent,
     CultureComponent,
-    SearchComponent
+    SearchComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+*, html, body {
+    margin: 1px;
+    padding: 1px;
+ }
+ .item{
+ width: 296px; 
+ height: 320px;
+ font-family: system-ui;
+ }
+ .item:hover{
+ opacity: 0.5;
+ cursor: pointer;
+ }

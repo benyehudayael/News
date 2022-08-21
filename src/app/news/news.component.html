@@ -1,4 +1,1 @@
-<div *ngFor="let item of items">
-  {{ item.title }}
-  <div>{{ item.content }}</div>
-</div>
+<app-item *ngFor="let item of items" [item]="item"></app-item>
