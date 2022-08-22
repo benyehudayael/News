@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { CultureComponent } from './culture/culture.component';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ItemComponent } from './item/item.component';
+import { NewItemFormComponent } from './new-item-form/new-item-form.component';
+
 
 @NgModule({
   declarations: [
@@ -31,12 +34,15 @@ import { ItemComponent } from './item/item.component';
     FutureComponent,
     CultureComponent,
     SearchComponent,
-    ItemComponent
+    ItemComponent,
+    NewItemFormComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

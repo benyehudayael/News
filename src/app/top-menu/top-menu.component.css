@@ -1,26 +1,31 @@
 body {
-    margin: 0;
+   margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
   .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #2b3a39;
+   
+   
   }
-  .topnav a {
+  .menu-items { width: fit-content; margin-left: auto;
+    margin-right: auto;}
+  .menu-items a {
+    display: block;
     float: left;
-    color: #f2f2f2;
+    color: #f9f9f9;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     align-content: center;
   }
-  .topnav a:hover {
-    background-color: #ddd;
+  .menu-items a:hover {
+    background-color: #9caaa9;
     color: black;
   }
-  .topnav a.active {
-    background-color: #055291;
+  .menu-items a.active {
+    background-color: #bccac9;
     color: white;
   }
   #searchIcon{

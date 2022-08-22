@@ -11,3 +11,14 @@ export class Item {
         this.image = item.image;
     }
 }
+export class NewItem {
+
+    constructor(
+      public id : String,
+      public title: String,
+      public content: String,
+      public image: String,
+      public subject: String
+    ) {  }
+  
+  }

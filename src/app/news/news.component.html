@@ -1,1 +1,8 @@
-<app-item *ngFor="let item of items" [item]="item"></app-item>
+<div class="itemsFlex">
+  <div class="title">
+    <div class="line"></div>
+    <h3>NEWS</h3>
+    <div class="line"></div>
+  </div>
+  <app-item *ngFor="let item of items" [item]="item"></app-item>
+</div>

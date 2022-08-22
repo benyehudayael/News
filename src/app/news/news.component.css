@@ -1,0 +1,32 @@
+.itemsFlex{
+    
+    width: 100%;
+    max-width: 910px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start ;
+    margin-left: auto;
+    margin-right: auto;
+    border:none;
+    padding-top: 30px;
+    margin-top: 25px;
+    
+}
+.line{
+    border: 1px solid;
+    width: 403px;
+    margin: auto;
+}
+.title{
+    margin-top: 20px;
+    margin: auto;
+    width: 910px;
+    display: flex;
+    justify-content: center;
+    color: #2b3a39;
+}
+h3{
+    font-family: sans-serif;
+    size: 5px;
+    letter-spacing: 1px;
+}

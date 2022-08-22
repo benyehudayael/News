@@ -11,6 +11,6 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getItems() : Observable<Item[]> {
-    return this.http.get<Item[]>('https://localhost:7071/api/item?pageSize=10&pageIndex=1');
+    return this.http.get<Item[]>('https://localhost:7071/api/item?pageSize=9&pageIndex=1');
   }
 }
