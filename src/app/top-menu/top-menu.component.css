@@ -34,5 +34,8 @@ body {
      margin-right: 2rem;
      /*background-image: url("yael-news\src\assets\icons8-search.gif");*/
   }
+  button{
+    margin-right: 2px;
+  }
   
   

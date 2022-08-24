@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CultureComponent } from './culture/culture.component';
 import { FutureComponent } from './future/future.component';
 import { HomeComponent } from './home/home.component';
+import { NewItemFormComponent } from './new-item-form/new-item-form.component';
 import { NewsComponent } from './news/news.component';
 import { ReelComponent } from './reel/reel.component';
 import { SearchComponent } from './search/search.component';
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'travel', component: TravelComponent },
   { path: 'future', component: FutureComponent },
   { path: 'culture', component: CultureComponent },
-  { path: 'search', component: SearchComponent }
+  { path: 'search', component: SearchComponent },
+  { path: 'NewItemForm', component: NewItemFormComponent }
 ];
 
 @NgModule({

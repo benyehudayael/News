@@ -1,26 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { NewItem } from 'src/model/item';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Item } from 'src/model/item';
+import { Subject } from 'src/model/Subject';
+import { DataService } from '../services/data.service';
 
 
 @Component({
   selector: 'app-new-item-form',
   templateUrl: './new-item-form.component.html',
-  styleUrls: ['./new-item-form.component.css']
+  styleUrls: ['./new-item-form.component.css'],
+  
 })
 export class NewItemFormComponent {
 
-  model = new NewItem('123456789', 'bla bla ', 'gla gla ', 'dla dla', 'okey');
-  subjects = ['news', 'sport', 'reel', 'worklife', 'travel', 'future', 'culture', 'search']
+  model = new Item({id: 'string', title: 'string', content: 'string', image: 'string', subjectId: 'string'});
+  subjects : Subject[] 
 
   submitted = false;
-  onSubmit() { this.submitted = true; }
+  onSubmit() { 
+    this.dataService.addNewItem(this.model)
+      .subscribe(arg => this.submitted = true);
+   }
 
   newItem() {
-    this.model = new NewItem('', '', '', '', '');
+    this.model = {id: '', title: '', content: '', image: '', subjectId : '' };
   }
   
-  constructor() { }
-
+  constructor(private dataService : DataService) {}
+ 
+ 
+  
   ngOnInit(): void {
   }
  
