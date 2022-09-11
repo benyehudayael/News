@@ -10,8 +10,9 @@ import { Subject } from 'src/model/Subject';
 export class DataService {
   constructor(private http: HttpClient) { }
 
-  getItems() : Observable<Item[]> {
-    return this.http.get<Item[]>('https://localhost:7071/api/item?pageSize=9&pageIndex=1');
+  getItems(pageIndex: number, pageSize: number, subjectId: string | null) : Observable<Item[]> {
+    return this.http.get<Item[]>('https://localhost:7071/api/item?pageSize=' 
+      + pageSize + '&pageIndex=' + pageIndex + (subjectId != null ? '&sid=' + subjectId : ''));
   }
 
   addNewItem(item: Item) : Observable<boolean> {

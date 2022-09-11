@@ -1,0 +1,19 @@
+
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+.ng-valid[required], .ng-valid.required  {
+    border-bottom: 5px solid #42A948;
+  }
+  .ng-invalid:not(form)  {
+    border-bottom: 5px solid #a94442;
+  }
+  #form{
+    margin-top: 10%;
+    margin-left: 25%;
+    width: 50%;
+    border: 1.5px solid #4e5d5c;
+    box-shadow: 5px 7px #bccac9, 2px 4px 8px #767a7a;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 500px;
+  }

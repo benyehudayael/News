@@ -1,4 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Item } from 'src/model/item';
 import { DataService } from '../services/data.service';
 
@@ -10,15 +12,26 @@ import { DataService } from '../services/data.service';
 export class NewsComponent implements OnInit, OnChanges {
 
   items: Item[] = [];
+  pageIndex: number = 1
+  pageSize: number = 9
+  sid: string | null
+  sub: Observable<ParamMap>;
 
-  constructor(private dataService : DataService) {
+  constructor(private _Activatedroute:ActivatedRoute,
+    private _router:Router,
+    private dataService : DataService) {
   }
 
   ngOnInit(): void {
-    this.dataService.getItems()
-      .subscribe(items => {
-          this.items = items;
-        });
+    this._Activatedroute.paramMap.subscribe(params => { 
+      console.log(params);
+       this.sid = params.get('sid'); 
+       this.dataService.getItems(this.pageIndex, this.pageSize, this.sid)
+       .subscribe(items => {
+           this.items = items;
+         });
+   });
+
   }
 
   ngOnChanges(): void {

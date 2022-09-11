@@ -4,13 +4,13 @@ body {
   }
   .topnav {
     overflow: hidden;
-    background-color: #2b3a39;
-   
-   
+    background-color: #011638   
   }
   .menu-items { width: fit-content; margin-left: auto;
-    margin-right: auto;}
+    margin-right: auto
+  }
   .menu-items a {
+    height: 55px;
     display: block;
     float: left;
     color: #f9f9f9;
@@ -19,23 +19,43 @@ body {
     text-decoration: none;
     font-size: 17px;
     align-content: center;
+    width: 83px;
   }
   .menu-items a:hover {
-    background-color: #9caaa9;
-    color: black;
-  }
-  .menu-items a.active {
-    background-color: #bccac9;
-    color: white;
-  }
-  #searchIcon{
-  
-     float: right;
-     margin-right: 2rem;
-     /*background-image: url("yael-news\src\assets\icons8-search.gif");*/
+    background-color: #DFF8EB;
+    color: #011638;
+    font-weight: bold;
   }
   button{
     margin-right: 2px;
   }
+  .searchIcn {
+    margin: 0ch;
+    padding: 0ch;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  }
+  .searchIcn:hover {
+    transform: scaleX(-1);
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
   
   

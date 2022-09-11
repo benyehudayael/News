@@ -3,3 +3,7 @@
     overflow-y: auto;
     height: calc(100vh - 48px);
 }
+.main-container{
+    height: 100%;
+    width: 100%;
+}

@@ -1,16 +1,21 @@
 <div class="topnav">
   <div class="menu-items">
-    <a class="active" href="/home">Home</a>
+    <a href="/home">Home</a>
     <a href="/news">News</a>
-    <a
-      *ngFor="let subject of subjects"
-      href="/{{ subject.name.toLowerCase() }}"
-      >{{ subject.name }}</a
-    >
-
-    <a href="/search">bla</a>
-    <button class="btn btn-lg btn-outline-primary" (click)="navigate()">
-      Tell us what's new
-    </button>
+    <a *ngFor="let subject of subjects" href="/news/{{ subject.id }}">{{
+      subject.name
+    }}</a>
+    <a class="dropdown">
+      <span>...</span>
+      <div class="dropdown-content" (click)="navigate()">
+        <p>Tell us what's new</p>
+      </div>
+    </a>
+    <a class="icnA" href="/search"
+      ><img
+        class="searchIcn"
+        src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png"
+        alt=""
+    /></a>
   </div>
 </div>
