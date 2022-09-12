@@ -23,15 +23,24 @@ export class NewsComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
+
+  }
+
+  ngAfterViewInit(): void {
     this._Activatedroute.paramMap.subscribe(params => { 
       console.log(params);
        this.sid = params.get('sid'); 
-       this.dataService.getItems(this.pageIndex, this.pageSize, this.sid)
-       .subscribe(items => {
-           this.items = items;
-         });
+       this.loadItems();
    });
+   // register to scroll
+   // call loadItems if scroll reach the bottom
+  }
 
+  private loadItems() {
+    this.dataService.getItems(this.pageIndex, this.pageSize, this.sid)
+      .subscribe(items => {
+        this.items = items;
+      });
   }
 
   ngOnChanges(): void {
