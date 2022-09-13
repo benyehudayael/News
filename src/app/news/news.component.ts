@@ -37,20 +37,20 @@ export class NewsComponent implements OnInit, OnChanges {
        this.sid = params.get('sid'); 
        this.loadItems();
    });
-   this.content = document.querySelector('.items-container');
+ 
+
+
+  this.content = document.querySelector('.scroll');
    /*what the meaning of 'content!'*/
    this.scroll$ = fromEvent(this.content!, 'scroll').pipe(map(() => { return this.content!.scrollTop; }))
    this.scroll$.subscribe((scrollPos) => {
     let limit = this.content!.scrollHeight - this.content!.clientHeight;
     if (limit - scrollPos < 2){
       this.pageIndex++;
-      this.dataService.getItems(this.pageIndex, this.pageSize, this.sid)
-      .subscribe(items => {
-        this.items.concat(items);
-      });
+      this.loadItems();
      /* this.loadingState = */
     }
-   })
+   }) 
 
    // register to scroll
    // call loadItems if scroll reach the bottom
@@ -59,7 +59,7 @@ export class NewsComponent implements OnInit, OnChanges {
   private loadItems() {
     this.dataService.getItems(this.pageIndex, this.pageSize, this.sid)
       .subscribe(items => {
-        this.items = items;
+        this.items = this.items.concat(items);
       });
   }
 
