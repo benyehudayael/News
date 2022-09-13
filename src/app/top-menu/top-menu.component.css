@@ -1,3 +1,4 @@
+
 body {
    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -15,31 +16,70 @@ body {
     float: left;
     color: #f9f9f9;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 0px;
     text-decoration: none;
     font-size: 17px;
     align-content: center;
     width: 83px;
   }
   .menu-items a:hover {
-    background-color: #DFF8EB;
-    color: #011638;
+    background-color: #364156;
+    
     font-weight: bold;
   }
-  button{
-    margin-right: 2px;
+ 
+/*fgfh*/
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #CDCDCD;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  height: 37.5px;
+  width: 37.5px;;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
   }
-  .searchIcn {
-    margin: 0ch;
-    padding: 0ch;
-    position: relative;
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
     width: 100%;
-    height: 100%;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    margin: 0;
+    padding: 14px;
   }
-  .searchIcn:hover {
-    transform: scaleX(-1);
+  .topnav input[type=text] {
+    border: 1px solid #CDCDCD;  
+    
   }
+}
+
+  .searchIcn {
+    height: 28px;
+    object-position:  top;
+  }
+  
   .dropdown {
     position: relative;
     display: inline-block;
