@@ -1,0 +1,15 @@
+
+
+.welcomeANDtime{
+display: flex; 
+flex-flow: row; 
+justify-content: space-between}
+#welcome{
+  font-size: 100%;
+  margin-left: 3%;
+}
+#time{
+    font-size: 50%;
+    margin-right: 3%;
+    margin-top: 1%;
+}

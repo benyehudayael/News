@@ -4,6 +4,7 @@ export class Item {
     content: string
     image: string
     subjectId: string
+    
 
     constructor(item: Item){
         this.id = item.id;
@@ -11,5 +12,6 @@ export class Item {
         this.content = item.content;
         this.image = item.image;
         this.subjectId = item.subjectId;
+       
     }
 }

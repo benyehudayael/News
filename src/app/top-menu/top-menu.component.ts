@@ -25,7 +25,7 @@ export class TopMenuComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getSubjects()
        .subscribe(subjects => {
-           this.subjects = subjects;
+           this.subjects = subjects.filter(x => x.showInMenu);
          });
   }
 

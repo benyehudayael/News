@@ -33,6 +33,7 @@ h3{
     height: fit-content;
     overflow: hidden;
     /* overflow-y: auto; */
+  
     max-width: 940px;
     display: flex;
     flex-flow: row wrap;

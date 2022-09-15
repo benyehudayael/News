@@ -1,9 +1,13 @@
 <div class="item">
-  <div>
-    <img style="max-height: 100%; max-width: 100%" [src]="item.image" />
+  <div class="image">
+    <img
+      style="max-height: 200px; max-width: 460px; object-fit: cover"
+      [src]="item.image"
+    />
   </div>
   <div class="content">
-    <h3>{{ item.title }}</h3>
+    <h4>{{ item.title }}</h4>
     <p>{{ item.content }}</p>
   </div>
+  <a href="">{{ item.subjectId }}</a>
 </div>

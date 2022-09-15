@@ -1,13 +1,18 @@
 *, html, body {
-    margin: 1px;
-    padding: 1px;
+    margin: 0px;
+    padding: 0px;
  }
  .item{
  width: 296px; 
  height: 320px;
  font-family: system-ui;
- }
- .item:hover{
- opacity: 0.5;
+ background-color: #ffffff;
+ margin: 5px 5px;
+ font-size: 1.25rem;
  cursor: pointer;
+ }
+ img:hover {-webkit-filter: brightness(110%); }
+
+ .content{
+    padding: 7px;
  }

@@ -45,7 +45,7 @@ export class NewsComponent implements OnInit, OnChanges {
    this.scroll$ = fromEvent(this.content!, 'scroll').pipe(map(() => { return this.content!.scrollTop; }))
    this.scroll$.subscribe((scrollPos) => {
     let limit = this.content!.scrollHeight - this.content!.clientHeight;
-    if (limit - scrollPos < 2){
+    if (limit - scrollPos < 180){
       this.pageIndex++;
       this.loadItems();
      /* this.loadingState = */
