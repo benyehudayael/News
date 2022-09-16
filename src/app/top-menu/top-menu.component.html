@@ -5,9 +5,8 @@
     <a *ngFor="let subject of subjects" href="/news/{{ subject.id }}">{{
       subject.name
     }}</a>
-    <a class="dropdown">
-      <span>...</span>
-      <div class="dropdown-content" (click)="navigate()">
+    <a>
+      <div (click)="navigate()">
         <p>Tell us what's new</p>
       </div>
     </a>
