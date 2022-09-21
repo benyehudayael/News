@@ -29,6 +29,9 @@ export class TopMenuComponent implements OnInit {
          });
   }
 
+  freeTextChange(e: any){
+     
+  }
 
   
 

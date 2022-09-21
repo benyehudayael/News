@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { fromEvent, Observable } from 'rxjs';
 import { Item } from 'src/model/item';
@@ -20,7 +20,7 @@ export class NewsComponent implements OnInit, OnChanges {
   /*Ceck this!*/
   content: any;
   scroll$: Observable<any>;
-  
+  @Input() freeText: string
 
   constructor(private _Activatedroute:ActivatedRoute,
     private _router:Router,
@@ -37,6 +37,7 @@ export class NewsComponent implements OnInit, OnChanges {
        this.sid = params.get('sid'); 
        this.loadItems();
    });
+   
  
 
 
@@ -57,13 +58,13 @@ export class NewsComponent implements OnInit, OnChanges {
   }
 
   private loadItems() {
-    this.dataService.getItems(this.pageIndex, this.pageSize, this.sid)
+    this.dataService.getItems(this.pageIndex, this.pageSize, this.sid, this.freeText)
       .subscribe(items => {
         this.items = this.items.concat(items);
       });
   }
 
   ngOnChanges(): void {
-
+    //TODO: check if free text change and call load items
   }
 }

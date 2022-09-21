@@ -13,7 +13,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class NewItemFormComponent {
 
-  model = new Item({id: 'string', title: 'string', content: 'string', image: 'string', subjectId: 'string'});
+  model = new Item({id: 'string', title: 'string', content: 'string', image: 'string', subjectId: 'string', subjectName: 'string', sourceName: 'string'});
   subjects : Subject[] 
 
   submitted = false;
@@ -23,7 +23,7 @@ export class NewItemFormComponent {
    }
 
   newItem() {
-    this.model = {id: '', title: '', content: '', image: '', subjectId : '' };
+    this.model = {id: '', title: '', content: '', image: '', subjectId : '', subjectName: '', sourceName: ''};
   }
   
   constructor(private dataService : DataService) {}

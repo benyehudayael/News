@@ -4,6 +4,8 @@ export class Item {
     content: string
     image: string
     subjectId: string
+    subjectName: string
+    sourceName: string
     
 
     constructor(item: Item){
@@ -12,6 +14,8 @@ export class Item {
         this.content = item.content;
         this.image = item.image;
         this.subjectId = item.subjectId;
+        this.subjectName = item.subjectName;
+        this.sourceName = item.sourceName
        
     }
 }
