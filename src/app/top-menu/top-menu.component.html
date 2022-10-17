@@ -1,28 +1,17 @@
 <div class="topnav">
   <div class="menu-items">
-    <a href="/home">Home</a>
-    <a href="/news">News</a>
+    <a href="/home" data-item="Home">Home</a>
+    <a href="/news" data-item="News">News</a>
     <a *ngFor="let subject of subjects" href="/news/{{ subject.id }}">{{
       subject.name
     }}</a>
-    <a>
+    <!-- <div class="dot"></div> -->
+    <!-- <a>
       <div (click)="navigate()">
         <p>Tell us what's new</p>
       </div>
-    </a>
-    <div class="search-container">
-      <form action="/action_page.php">
-        <input
-          (change)="freeTextChange($event)"
-          type="text"
-          placeholder="Search.."
-          name="search"
-        />
-        <button type="submit">
-          <i class="fa fa-search"></i>
-        </button>
-      </form>
-    </div>
+    </a> -->
+
     <!-- <div class="searchA">
       <img
         class="searchIcn"
@@ -31,5 +20,18 @@
       />
     </div>
     <div><input type="text"></div> -->
+  </div>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input
+        (change)="freeTextChange($event)"
+        type="text"
+        placeholder="Search.."
+        name="search"
+      />
+      <button type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
   </div>
 </div>

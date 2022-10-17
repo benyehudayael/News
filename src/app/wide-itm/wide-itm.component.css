@@ -1,0 +1,61 @@
+:host {
+   transition: box-shadow ease-in-out 0.35s;
+   margin: 10px;
+   cursor: pointer;
+   transition: 0.3s;
+  }
+  :host:hover img{
+     -webkit-filter: brightness(110%);
+  }
+  .item{
+   width: auto; 
+   height: 270px;
+   font-family: system-ui;
+   background-color: #ffffff;
+   font-size: 1.25rem;
+   overflow: hidden; 
+   }
+  
+   
+   
+  
+   .imagee{
+     width: 400px;
+     height: 210px;
+     position: relative;
+     display: inline-block;
+     overflow: hidden;
+     margin: 0;
+   }
+   
+   .imagee > img {
+     display: block;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     min-height: 100%;
+     min-width: 100%;
+     transform: translate(-50%, -50%);
+   }
+  
+   .content{
+      padding: 2px;
+      background-color: #ffffff;
+      width: 100%;
+      height: 60px;
+   }
+   a:link {
+     text-decoration: none;
+   }
+  h4{
+    font-family: ReithSans,Arial,Helvetica,freesans,sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: #444444;
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }

@@ -6,7 +6,7 @@ export class Item {
     subjectId: string
     subjectName: string
     sourceName: string
-    
+    link: string
 
     constructor(item: Item){
         this.id = item.id;
@@ -15,7 +15,7 @@ export class Item {
         this.image = item.image;
         this.subjectId = item.subjectId;
         this.subjectName = item.subjectName;
-        this.sourceName = item.sourceName
-       
+        this.sourceName = item.sourceName;
+        this.link = item.link;
     }
 }

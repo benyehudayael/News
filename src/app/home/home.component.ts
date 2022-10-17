@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { Item } from 'src/model/item';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +10,77 @@ import * as moment from 'moment';
 })
 export class HomeComponent implements OnInit {
   date: string
-  constructor() { }
+  slideIndex = 0;
+  items: Item [] = [];
+  pageIndex: number = 1
+  pageSize: number = 9
+  itemsNews: Item [] = [];
+  pageIndexNews: number = 1
+  pageSizeNews: number = 3
+  itemsSport: Item [] = [];
+  itemsReel: Item [] = [];
+  sid: string | null
+  @Input() freeText: string
+  
+  /*Ceck this!*/
+  content: any;
+  constructor(
+    private dataService : DataService) { }
 
   ngOnInit(): void {
     this.date = moment().format('dddd, DD MMMM');
+
+      
   }
-  
+  ngAfterViewInit(): void {
+    this.loadItems();
+    this.loadItemsNews();
+    this.loadItemsSport();
+    this.loadItemsReel();
+
+  }
+  plusSlides(n: number) {
+    if ((this.slideIndex + n) >= this.items.length) {
+      this.slideIndex = 0; 
+      return;
+    }
+    if ((this.slideIndex + n) < 0) {
+      this.slideIndex = this.items.length - 1;
+      return;
+    }
+    this.slideIndex += n;
+  }
+
+  currentSlide(n: number) {
+    this.slideIndex = n;
+  }
+  private loadItems() {
+    this.dataService.getItems(this.pageIndex, this.pageSize, this.sid, this.freeText)
+      .subscribe(items => {
+        this.items = this.items.concat(items);
+      });
+  }
+  private loadItemsNews() {
+    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, this.sid, this.freeText)
+      .subscribe(items => {
+        this.itemsNews = items;
+      });
+  }
+  private loadItemsSport() {
+    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, 'Finance', this.freeText)
+      .subscribe(items => {
+        this.itemsSport = items;
+      });
+  }
+  private loadItemsReel() {
+    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, 'Heard on the Street', this.freeText)
+      .subscribe(items => {
+        this.itemsReel = items;
+      });
+  }
+  public goToLink(url: string){
+    // this.items = this.items.map(x => { if(x.link == url) return new Item(x); else return x; } );
+    window.open(url);
+  }
 
 }

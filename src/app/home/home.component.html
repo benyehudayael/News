@@ -1,4 +1,86 @@
-<h2 class="welcomeANDtime">
-  <div id="welcome"><span>Welcome to yael news</span></div>
-  <div id="time">{{ this.date }}</div>
-</h2>
+<section>
+  <h2 class="welcomeANDtime">
+    <div id="welcome"><span>Welcome to yael news</span></div>
+    <div id="time">{{ this.date }}</div>
+  </h2>
+</section>
+<app-weather></app-weather>
+<!-- <section>
+  <div class="slideshow-container">
+    <div
+      class="mySlides fade"
+      *ngFor="let item of items; let i = index"
+      [attr.data-index]="i"
+      [style.display]="i == slideIndex ? 'block' : 'none'"
+    >
+      <div class="numbertext">{{ i + " / " + items.length }}</div>
+      <img [src]="item.image" style="width: 100%" />
+      <div class="text">{{ item.title }}</div>
+    </div>
+    <a class="prev" (click)="plusSlides(-1)">❮</a>
+    <a class="next" (click)="plusSlides(1)">❯</a>
+  </div>
+  <br />
+
+  <div style="text-align: center">
+    <span
+      *ngFor="let item of items; let i = index"
+      class="dot"
+      [class.active]="i == slideIndex"
+      (click)="currentSlide(i)"
+    ></span>
+  </div>
+</section> -->
+<section id="itemsRowSubject">
+  <h2><a href=""></a>News</h2>
+  <app-item
+    *ngFor="let item of itemsNews"
+    [item]="item"
+    (click)="goToLink(item.link)"
+  ></app-item>
+  <h2><a href=""></a>Sport</h2>
+  <app-item
+    *ngFor="let item of itemsSport"
+    [item]="item"
+    (click)="goToLink(item.link)"
+  ></app-item>
+  <h2><a href=""></a>Reel</h2>
+  <app-item
+    *ngFor="let item of itemsReel"
+    [item]="item"
+    (click)="goToLink(item.link)"
+  ></app-item>
+</section>
+<section>
+  <div class="imageBG">
+    <div class="sport--button--container">
+      <h1 class="subject">SPORT</h1>
+      <div class="sport--button">
+        <div class="sport--button--title">Visit Sport</div>
+        <div class="sport--button--svg">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#BBB"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <polyline points="14 6 20 12 14 18"></polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="items-row">
+      <app-wide-itm
+        *ngFor="let item of items | slice: 0:3; let i = index"
+        [item]="item"
+        (click)="goToLink(item.link)"
+      ></app-wide-itm>
+    </div>
+  </div>
+</section>

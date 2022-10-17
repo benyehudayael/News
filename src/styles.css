@@ -4,4 +4,8 @@ html, body {
     height: 100vh;
     background-color: #f6f6f6;
     overflow: hidden;
+    position: relative;
+}
+app-root {
+    position: relative;
 }

@@ -4,6 +4,7 @@ import { Subject } from 'src/model/Subject';
 import { NewItemFormComponent } from '../new-item-form/new-item-form.component';
 import { DataService } from '../services/data.service';
 import { Router } from '@angular/router';
+import { Item } from 'src/model/item';
 
 @Component({
   selector: 'app-top-menu',
@@ -14,6 +15,7 @@ import { Router } from '@angular/router';
 export class TopMenuComponent implements OnInit {
   
   subjects: Subject[]
+  items: Item[];
   constructor(private dataService: DataService, private router: Router) { 
   
   }
@@ -32,6 +34,7 @@ export class TopMenuComponent implements OnInit {
   freeTextChange(e: any){
      
   }
+ 
 
   
 

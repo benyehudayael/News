@@ -12,7 +12,7 @@ export class DataService {
 
   getItems(pageIndex: number, pageSize: number, subjectId: string | null, freeText: string) : Observable<Item[]> {
     return this.http.get<Item[]>('https://localhost:7071/api/item?pageSize=' 
-      + pageSize + '&pageIndex=' + pageIndex + (subjectId != null ? '&sid=' + subjectId : '') + freeText);
+      + pageSize + '&pageIndex=' + pageIndex + (subjectId != null ? '&sid=' + subjectId : '')  + '&ft='+ freeText);
   }
 
   addNewItem(item: Item) : Observable<boolean> {

@@ -5,6 +5,10 @@
     <div class="line"></div>
   </div>
   <div class="items-container">
-    <app-item *ngFor="let item of items" [item]="item"></app-item>
+    <app-item
+      *ngFor="let item of items"
+      [item]="item"
+      (click)="goToLink(item.link)"
+    ></app-item>
   </div>
 </div>

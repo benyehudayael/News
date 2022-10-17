@@ -37,9 +37,6 @@ export class NewsComponent implements OnInit, OnChanges {
        this.sid = params.get('sid'); 
        this.loadItems();
    });
-   
- 
-
 
   this.content = document.querySelector('.scroll');
    /*what the meaning of 'content!'*/
@@ -62,6 +59,10 @@ export class NewsComponent implements OnInit, OnChanges {
       .subscribe(items => {
         this.items = this.items.concat(items);
       });
+  }
+  public goToLink(url: string){
+    this.items = this.items.map(x => { if(x.link == url) return new Item(x); else return x; } );
+    //window.open(url);
   }
 
   ngOnChanges(): void {
