@@ -1,58 +1,34 @@
 <section>
-  <h2 class="welcomeANDtime">
-    <div id="welcome"><span>Welcome to yael news</span></div>
+  <div class="welcomeANDtime module__content">
+    <div id="welcome"><span>Welcome to Yael News</span></div>
     <div id="time">{{ this.date }}</div>
-  </h2>
+  </div>
 </section>
-<app-weather></app-weather>
-<!-- <section>
-  <div class="slideshow-container">
-    <div
-      class="mySlides fade"
-      *ngFor="let item of items; let i = index"
-      [attr.data-index]="i"
-      [style.display]="i == slideIndex ? 'block' : 'none'"
-    >
-      <div class="numbertext">{{ i + " / " + items.length }}</div>
-      <img [src]="item.image" style="width: 100%" />
-      <div class="text">{{ item.title }}</div>
-    </div>
-    <a class="prev" (click)="plusSlides(-1)">❮</a>
-    <a class="next" (click)="plusSlides(1)">❯</a>
-  </div>
-  <br />
-
-  <div style="text-align: center">
-    <span
-      *ngFor="let item of items; let i = index"
-      class="dot"
-      [class.active]="i == slideIndex"
-      (click)="currentSlide(i)"
-    ></span>
-  </div>
-</section> -->
+<app-weather class="module__content"></app-weather>
 <section id="itemsRowSubject">
-  <h2><a href=""></a>News</h2>
-  <app-item
-    *ngFor="let item of itemsNews"
-    [item]="item"
-    (click)="goToLink(item.link)"
-  ></app-item>
-  <h2><a href=""></a>Sport</h2>
-  <app-item
-    *ngFor="let item of itemsSport"
-    [item]="item"
-    (click)="goToLink(item.link)"
-  ></app-item>
-  <h2><a href=""></a>Reel</h2>
-  <app-item
-    *ngFor="let item of itemsReel"
-    [item]="item"
-    (click)="goToLink(item.link)"
-  ></app-item>
+  <div class="module__content">
+    <h2><a href=""></a>News</h2>
+    <app-item
+      *ngFor="let item of itemsNews"
+      [item]="item"
+      (click)="goToLink(item.link)"
+    ></app-item>
+    <h2><a href=""></a>Sport</h2>
+    <app-item
+      *ngFor="let item of itemsSport"
+      [item]="item"
+      (click)="goToLink(item.link)"
+    ></app-item>
+    <h2><a href=""></a>Reel</h2>
+    <app-item
+      *ngFor="let item of itemsReel"
+      [item]="item"
+      (click)="goToLink(item.link)"
+    ></app-item>
+  </div>
 </section>
-<section>
-  <div class="imageBG">
+<section class="imageBG">
+  <div class="module__content">
     <div class="sport--button--container">
       <h1 class="subject">SPORT</h1>
       <div class="sport--button">

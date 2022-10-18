@@ -10,23 +10,24 @@
     margin-top: 25px;   
     z-index: 0; 
 }
-.line {
+/* .line {
     border: 1px solid;
     width: 368px;
     margin: auto;
     background-color: #011638;
-}
+} */
 .title {
-    margin-top: 20px;
     margin: auto;
+    margin-top: 40px;
     width: 940px;
     display: flex;
     justify-content: center;
-    color: #011638;
+    color: #8b1826;
 }
 h3{
-    font-family: sans-serif;
-    size: 5px;
+    font-family:  'acta-display', serif;;
+    font-size: 74px;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 .items-container {
@@ -34,7 +35,6 @@ h3{
     height: fit-content;
     overflow: hidden;
     /* overflow-y: auto; */
-  
     max-width: 940px;
     display: flex;
     flex-flow: row wrap;

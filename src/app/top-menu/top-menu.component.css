@@ -1,11 +1,9 @@
 
 body {
    margin: 0;
-   font-family: Arial, Helvetica, sans-serif;
+    font-family: 'acta-display', serif;
   }
   .topnav {
-    overflow: hidden;
-    background-color: #040303; 
     display: flex;
     justify-content: space-around;
     flex-flow: row nowrap;
@@ -19,6 +17,7 @@ body {
     
   }
    a{
+    font-family: 'acta-display', serif;
     color: #f9f9f9;
     text-align: center;
     text-decoration: none;
@@ -28,7 +27,8 @@ body {
     width: fit-content;
     padding: 10px;
     height: 55px;
-    border: 1px solid #000000;
+    border: 0;
+    border-radius: 15%;
     /* -webkit-transition: all 0.2s ease-in-out; */
     /* transition: all 0.2s ease-in-out; */
     /* transition: all 1s ease-in-out; */
@@ -49,44 +49,45 @@ body {
     }
   } */
   a:nth-child(1):hover{
-    color: #797D62;
-    border-left: 1px solid #797D62;
-    border-right: 1px solid #797D62;
+    color: #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
   }
  a:nth-child(2):hover{
-  color: #9B9B7A;
-  border-left: 1px solid #9B9B7A;
-  border-right: 1px solid #9B9B7A;
+  color: #8b1826;
+  border-left: 1px solid #8b1826;
+  border-right: 1px solid #8b1826;
 }
 a:nth-child(3):hover{
-  color: #BAA587;
-  border-left: 1px solid #BAA587;
-  border-right: 1px solid #BAA587;
+  color: #18467a;
+  border-left: 1px solid #18467a;
+  border-right: 1px solid #18467a;
 }
 a:nth-child(4):hover{
-  color: #D9AE94;
-  border-left: 1px solid #D9AE94;
-  border-right: 1px solid #D9AE94;
+  color: #969300;
+  border-left: 1px solid #969300;
+  border-right: 1px solid #969300;
 }
 a:nth-child(5):hover{
-  color: #F1DCA7;
-  border-left: 1px solid #F1DCA7;
-  border-right: 1px solid #F1DCA7;
+  color: #186115;
+  border-left: 1px solid #186115;
+  border-right: 1px solid #186115;
+  
 }
 a:nth-child(6):hover{
-  color: #FFCB69;
-  border-left: 1px solid #FFCB69;
-  border-right: 1px solid #FFCB69;
+  color: #774679;
+  border-left: 1px solid #774679;
+  border-right: 1px solid #774679;
 }
 a:nth-child(7):hover{
-  color: #E8AC65;
-  border-left: 1px solid #E8AC65;
-  border-right: 1px solid #E8AC65;
+  color: #571d5c;
+  border-left: 1px solid #571d5c;
+  border-right: 1px solid #571d5c;
 }
 a:nth-child(8):hover{
-  color: #B58463;
-  border-left: 1px solid #B58463;
-  border-right: 1px solid #B58463;
+  color: #16207e;
+  border-left: 1px solid #16207e;
+  border-right: 1px solid #16207e;
 }
 
 

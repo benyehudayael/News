@@ -1,7 +1,9 @@
+
 .scroll {
     overflow: hidden;
     overflow-y: auto;
     height: calc(100vh - 48px);
+  min-height: 100%;
    
 }
 .main-container{
@@ -9,6 +11,16 @@
     height: 100%;
     width: 100%;
 }
-/* app-footer{
-    
-} */
+ app-top-menu{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.801);
+    border-bottom: 0.2px solid rgb(105, 105, 105);
+} 
+app-footer{
+    bottom: 0;
+}

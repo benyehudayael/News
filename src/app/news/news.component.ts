@@ -4,6 +4,7 @@ import { fromEvent, Observable } from 'rxjs';
 import { Item } from 'src/model/item';
 import { DataService } from '../services/data.service';
 import { map} from 'rxjs/operators'
+import { Subject } from 'src/model/Subject';
 
 @Component({
   selector: 'app-news',
@@ -21,18 +22,27 @@ export class NewsComponent implements OnInit, OnChanges {
   content: any;
   scroll$: Observable<any>;
   @Input() freeText: string
+  sectionName: string;
+  sectionId: any;
+  subjects: Subject[];
 
-  constructor(private _Activatedroute:ActivatedRoute,
+  constructor(private _activatedRoute:ActivatedRoute,
     private _router:Router,
     private dataService : DataService) {
+      this.sectionId = this._activatedRoute.snapshot.url[1];
   }
 
   ngOnInit(): void {
-
+    this.dataService.getSubjects()
+    .subscribe(subjects => {
+        this.subjects = subjects.filter(x => x.showInMenu);
+        var subject = this.subjects.find(x => x.id == this.sectionId);
+        this.sectionName = subject ? subject.name.toUpperCase() : "NEWS";
+      });
   }
 
   ngAfterViewInit(): void { 
-    this._Activatedroute.paramMap.subscribe(params => { 
+    this._activatedRoute.paramMap.subscribe(params => { 
       console.log(params);
        this.sid = params.get('sid'); 
        this.loadItems();
@@ -62,7 +72,7 @@ export class NewsComponent implements OnInit, OnChanges {
   }
   public goToLink(url: string){
     this.items = this.items.map(x => { if(x.link == url) return new Item(x); else return x; } );
-    //window.open(url);
+    window.open(url);
   }
 
   ngOnChanges(): void {
