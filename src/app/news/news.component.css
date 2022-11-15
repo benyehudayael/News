@@ -22,13 +22,14 @@
     width: 940px;
     display: flex;
     justify-content: center;
-    color: #8b1826;
+    color: #23272a;
 }
 h3{
     font-family:  'acta-display', serif;;
     font-size: 74px;
     font-weight: bold;
     letter-spacing: 1px;
+    -webkit-text-stroke: 1px rgb(255, 255, 255)
 }
 .items-container {
     width: 100%;

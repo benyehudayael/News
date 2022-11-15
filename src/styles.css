@@ -2,7 +2,7 @@ html, body {
     padding: 0px;
     margin: 0px;
     height: 100vh;
-    background-color: #23272a;
+    background-color: rgb(33, 37, 41);
     overflow: hidden;
     position: relative;
 }

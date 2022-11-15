@@ -7,21 +7,24 @@
 }
 :host:hover {
   /* transform: scale(1.001); */
-  z-index: 2;
-  box-shadow: 4px 3px 7px -2px rgba(73, 73, 73, 0.397);
+  /* z-index: 2;
+  box-shadow: 4px 3px 7px -2px rgba(73, 73, 73, 0.397); */
+  -webkit-filter: brightness(110%);
 }
 .item{
  width: 100%; 
  height: 100%;
- font-family: Arial, Helvetica, sans-serif;
- background-color: #ffffff25;
+ font-family: ReithSans,Arial,Helvetica,freesans,sans-serif;;
+ background-color: #ced4da4b;
  overflow: hidden; 
  }
  h4{
-  font-size: 1.25rem;
+  font-size: 1.30rem;
+  
  }
  p{
   font-size: 1rem;
+ 
  }
 
  
@@ -47,8 +50,8 @@
  }
 
  .content{
-    padding: 10px;
-    color: #f9f9f9;
+    padding: 10px 10px 10px 10px;;
+    color: #ffffff;
  }
  a:link {
    text-decoration: none;

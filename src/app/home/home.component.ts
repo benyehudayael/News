@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   pageSize: number = 9
   itemsNews: Item [] = [];
   pageIndexNews: number = 1
-  pageSizeNews: number = 3
+  pageSizeNews: number = 5
   itemsSport: Item [] = [];
   itemsReel: Item [] = [];
   sid: string | null
@@ -67,13 +67,13 @@ export class HomeComponent implements OnInit {
       });
   }
   private loadItemsSport() {
-    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, 'Finance', this.freeText)
+    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, '250C59D7-CA7E-4D07-8DFF-572466408EFD', this.freeText)
       .subscribe(items => {
         this.itemsSport = items;
       });
   }
   private loadItemsReel() {
-    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, 'Heard on the Street', this.freeText)
+    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, this.sid, this.freeText)
       .subscribe(items => {
         this.itemsReel = items;
       });

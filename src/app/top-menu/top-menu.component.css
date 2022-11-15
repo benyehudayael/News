@@ -25,10 +25,12 @@ body {
     text-transform: uppercase;
     font-weight: 500;
     width: fit-content;
-    padding: 10px;
+    padding: 13px;
     height: 55px;
-    border: 0;
-    border-radius: 15%;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    /* border: 1px solid rgba(0, 0, 0, 0.43); */
+    border-radius:15%;
     /* -webkit-transition: all 0.2s ease-in-out; */
     /* transition: all 0.2s ease-in-out; */
     /* transition: all 1s ease-in-out; */
@@ -49,43 +51,35 @@ body {
     }
   } */
   a:nth-child(1):hover{
-    color: #ffffff;
     border-left: 1px solid #ffffff;
     border-right: 1px solid #ffffff;
   }
  a:nth-child(2):hover{
-  color: #8b1826;
   border-left: 1px solid #8b1826;
   border-right: 1px solid #8b1826;
 }
 a:nth-child(3):hover{
-  color: #18467a;
   border-left: 1px solid #18467a;
   border-right: 1px solid #18467a;
 }
 a:nth-child(4):hover{
-  color: #969300;
   border-left: 1px solid #969300;
   border-right: 1px solid #969300;
 }
 a:nth-child(5):hover{
-  color: #186115;
   border-left: 1px solid #186115;
   border-right: 1px solid #186115;
   
 }
 a:nth-child(6):hover{
-  color: #774679;
   border-left: 1px solid #774679;
   border-right: 1px solid #774679;
 }
 a:nth-child(7):hover{
-  color: #571d5c;
   border-left: 1px solid #571d5c;
   border-right: 1px solid #571d5c;
 }
 a:nth-child(8):hover{
-  color: #16207e;
   border-left: 1px solid #16207e;
   border-right: 1px solid #16207e;
 }
