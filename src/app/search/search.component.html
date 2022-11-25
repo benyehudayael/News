@@ -1,1 +1,8 @@
-<p>search works!</p>
+<div class="itemsFlex">
+  <div class="title">
+    <h3>"{{ inputValue }}"</h3>
+  </div>
+  <div class="items-container">
+    <app-item *ngFor="let item of items" [item]="item"></app-item>
+  </div>
+</div>

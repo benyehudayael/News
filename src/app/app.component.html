@@ -1,7 +1,10 @@
 <div class="main-container">
-  <app-top-menu></app-top-menu>
-  <div class="scroll">
+  <app-top-menu (addItemClick)="openNewItemForm()"></app-top-menu>
+  <div [class.scroll]="ScrollTime">
     <router-outlet></router-outlet>
     <app-footer></app-footer>
+  </div>
+  <div class="newItem" *ngIf="timeToOpen">
+    <app-new-item-form (closingDialog)="closeDialog()"></app-new-item-form>
   </div>
 </div>

@@ -5,33 +5,23 @@
     <a *ngFor="let subject of subjects" href="/news/{{ subject.id }}">{{
       subject.name
     }}</a>
-    <!-- <div class="dot"></div> -->
-    <!-- <a>
-      <div (click)="navigate()">
-        <p>Tell us what's new</p>
-      </div>
-    </a> -->
-
-    <!-- <div class="searchA">
-      <img
-        class="searchIcn"
-        src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png"
-        alt=""
-      />
-    </div>
-    <div><input type="text"></div> -->
   </div>
+  <div class="addItem" (click)="navigateNewItem()">
+    <i class="fa fa-plus"></i>
+    <span class="tooltiptext">Add Item</span>
+  </div>
+
   <div class="search-container">
-    <form action="/action_page.php">
-      <input
-        (change)="freeTextChange($event)"
-        type="text"
-        placeholder="Search.."
-        name="search"
-      />
-      <button type="submit">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
+    <input
+      #box
+      [(ngModel)]="value"
+      (keydown.enter)="navigate()"
+      type="text"
+      placeholder="Search.."
+      name="search"
+    />
+    <button type="submit" (click)="navigate()">
+      <i class="fa fa-search"></i>
+    </button>
   </div>
 </div>

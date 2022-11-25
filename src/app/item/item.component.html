@@ -3,11 +3,11 @@
     <img style="height: 200px; object-fit: cover" [src]="item.image" />
   </div>
   <div class="content">
-    <h4>{{ item.title }}</h4>
-    <p>{{ item.content }}</p>
+    <div>{{ item.title }}</div>
+    <!-- <p>{{ item.content }}</p> -->
   </div>
   <div class="subjectInfo">
-    <div class="line"></div>
+    <div class="line" *ngIf="item.subjectName"></div>
     <a href="">{{ item.subjectName }}</a>
   </div>
 </div>

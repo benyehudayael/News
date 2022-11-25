@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Item } from 'src/model/item';
 import { Subject } from 'src/model/Subject';
@@ -13,18 +13,19 @@ import { FormBuilder } from '@angular/forms';
 })
 export class NewItemFormComponent {
 
-  model = new Item({id: 'string', title: 'string', content: 'string', image: 'string', subjectId: 'string', subjectName: 'string', sourceName: 'string', link: 'string'});
+  model = new Item({id: '', title: '', content: '', image: '', subjectId: '', subjectName: '', sourceName: '', link: ''});
   subjects : Subject[] 
+  @Output() closingDialog = new EventEmitter();
 
   submitted = false;
-  onSubmit() { 
+  saveAndCloseForm() { 
     this.dataService.addNewItem(this.model)
       .subscribe(arg => this.submitted = true);
+    this.closingDialog.emit();
    }
-
-  newItem() {
-    this.model = {id: '', title: '', content: '', image: '', subjectId : '', subjectName: '', sourceName: '', link: ''};
-  }
+   closeForm(){
+     this.closingDialog.emit();
+   }
   
   constructor(private dataService : DataService) {}
  

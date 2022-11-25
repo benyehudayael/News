@@ -25,7 +25,7 @@ export class WeatherComponent implements OnInit {
          </h6>
          <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
          <figure>
-           <img style="width: 30px" class="city-icon" src="${icon}" alt="${
+           <img class="city-icon" src="${icon}" alt="${
          weather[0]["description"]
        }">
            <figcaption>${weather[0]["description"]}</figcaption>

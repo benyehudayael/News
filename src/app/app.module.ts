@@ -15,7 +15,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WideItmComponent } from './wide-itm/wide-itm.component';
 import { WeatherComponent } from './weather/weather.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,14 +27,13 @@ import { WeatherComponent } from './weather/weather.component';
     NewItemFormComponent,
     WideItmComponent,
     WeatherComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

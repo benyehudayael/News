@@ -4,10 +4,9 @@
     <div id="time">{{ this.date }}</div>
   </div>
 </section>
-<app-weather></app-weather>
 <section id="itemsRowSubject">
   <div class="module__content">
-    <h2><a href=""></a>News</h2>
+    <h2 *ngIf="itemsNews.length > 0"><a href=""></a>News</h2>
     <div class="threeItems">
       <app-item
         *ngFor="let item of itemsNews"
@@ -15,7 +14,7 @@
         (click)="goToLink(item.link)"
       ></app-item>
     </div>
-    <h2><a href=""></a>Sport</h2>
+    <h2 *ngIf="itemsSport.length > 0"><a href=""></a>Sport</h2>
     <div class="threeItems">
       <app-item
         *ngFor="let item of itemsSport"
@@ -23,7 +22,7 @@
         (click)="goToLink(item.link)"
       ></app-item>
     </div>
-    <h2><a href=""></a>Reel</h2>
+    <h2 *ngIf="itemsReel.length > 0"><a href=""></a>Reel</h2>
     <div class="threeItems">
       <app-item
         *ngFor="let item of itemsReel"
@@ -33,8 +32,9 @@
     </div>
   </div>
 </section>
+<app-weather></app-weather>
 <section class="imageBG">
-  <div class="module__content">
+  <div class="module__full">
     <div class="sport--button--container">
       <h1 class="subject">REEL</h1>
       <div class="sport--button">

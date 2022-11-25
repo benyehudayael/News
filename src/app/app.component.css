@@ -1,4 +1,3 @@
-
 .scroll {
     overflow: hidden;
     overflow-y: auto;
@@ -7,6 +6,7 @@
     
 }
 .main-container{
+    z-index: 0;
     position: relative;
     height: 100%;
     width: 100%;
@@ -18,7 +18,7 @@
     left: 0;
     width: 100%;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.568);
+    background: #02020286;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.1px);
     -webkit-backdrop-filter: blur(5.1px);
@@ -26,6 +26,14 @@
     /* background-color: rgba(0, 0, 0, 0.801); */
     border-bottom: 0.2px solid rgb(105, 105, 105);
 } 
+.newItem{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: aliceblue;
+    z-index: 200;
+    top: 57px
+}
 app-footer{
     bottom: 0;
 }

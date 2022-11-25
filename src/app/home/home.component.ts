@@ -13,14 +13,14 @@ export class HomeComponent implements OnInit {
   slideIndex = 0;
   items: Item [] = [];
   pageIndex: number = 1
-  pageSize: number = 9
+  pageSize: number = 9;
   itemsNews: Item [] = [];
-  pageIndexNews: number = 1
-  pageSizeNews: number = 5
+  pageIndexNews: number = 1;
+  pageSizeNews: number = 5;
   itemsSport: Item [] = [];
   itemsReel: Item [] = [];
-  sid: string | null
-  @Input() freeText: string
+  sid: string | null;
+  freeText: string = '';
   
   /*Ceck this!*/
   content: any;

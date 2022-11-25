@@ -5,19 +5,19 @@
    transition: 0.3s;
   }
   :host:hover img{
-     -webkit-filter: brightness(110%);
+     -webkit-filter: brightness(120%);
   }
   .item{
    width: auto; 
-   height: 270px;
+   height: auto;
    font-family: system-ui;
-   background-color: #ffffff;
-   font-size: 1.25rem;
+   background-color: #ffffff45;
    overflow: hidden; 
+   border-bottom: 0.2px solid #29282894;
    }
    .imagee{
      width: 100%;
-     height: 210px;
+     height: 280px;
      position: relative;
      display: inline-block;
      overflow: hidden;
@@ -36,22 +36,19 @@
   
    .content{
       padding: 2px;
-      background-color: #ffffff;
       width: 100%;
-      height: 60px;
+      height: 80px;
    }
    a:link {
      text-decoration: none;
    }
-  h4{
+  h2{
     font-family: ReithSans,Arial,Helvetica,freesans,sans-serif;
-    font-size: 20px;
-    line-height: 24px;
-    color: #444444;
+    color: #1f1f1f;
     margin: 0;
-    font-size: 17px;
+    font-size: 23px;
     font-weight: bold;
-    line-height: 20px;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    overflow: hidden;
   }
