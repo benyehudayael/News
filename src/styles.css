@@ -1,11 +1,37 @@
-html, body { 
+body {
+    --text-color: rgb(245, 239, 239);
+    --bkg-color: #363535;
+    --menu-bg-color: #222222;
+    --menu-shadow-color: #141212;
+    --text-hover-color: rgb(212, 209, 209);
+    --item-bg: #484646;
+    --item-hover-bg: #6c6a6a;
+    --wide-items-img: url(https://ychef.files.bbci.co.uk/1200x675/p08h02kk.jpg);
+    --wide-item-bg: #36353570;
+}
+
+body.light-theme {
+    --text-color: #41464b;
+    --bkg-color: #f7f7f7;
+    --menu-bg-color: #d3d3d382;
+    --menu-shadow-color: rgb(161 160 160 / 64%);
+    --text-hover-color: #737c85;
+    --item-bg: #3a3a3a0f;
+    --item-hover-bg: #2c2c2c3b;
+    --wide-items-img: url("https://ychef.files.bbci.co.uk/976x549/p0836dcl.jpg");
+    --wide-item-bg: #ffffff57;
+}
+
+html,
+body {
     padding: 0px;
     margin: 0px;
     height: 100vh;
-    background-color: #111111;
+    background-color: var(--bkg-color);
     overflow: hidden;
     position: relative;
 }
+
 app-root {
     position: relative;
 }

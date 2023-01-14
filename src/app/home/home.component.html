@@ -8,48 +8,28 @@
   <div class="module__content">
     <h2 *ngIf="itemsNews.length > 0"><a href=""></a>News</h2>
     <div class="threeItems">
-      <app-item
-        *ngFor="let item of itemsNews"
-        [item]="item"
-        (click)="goToLink(item.link)"
-      ></app-item>
+      <app-item *ngFor="let item of itemsNews" [item]="item" (click)="goToLink(item.link)"></app-item>
     </div>
     <h2 *ngIf="itemsSport.length > 0"><a href=""></a>Sport</h2>
     <div class="threeItems">
-      <app-item
-        *ngFor="let item of itemsSport"
-        [item]="item"
-        (click)="goToLink(item.link)"
-      ></app-item>
+      <app-item *ngFor="let item of itemsSport" [item]="item" (click)="goToLink(item.link)"></app-item>
     </div>
     <h2 *ngIf="itemsReel.length > 0"><a href=""></a>Reel</h2>
     <div class="threeItems">
-      <app-item
-        *ngFor="let item of itemsReel"
-        [item]="item"
-        (click)="goToLink(item.link)"
-      ></app-item>
+      <app-item *ngFor="let item of itemsReel" [item]="item" (click)="goToLink(item.link)"></app-item>
     </div>
   </div>
 </section>
 <app-weather></app-weather>
 <section class="imageBG">
-  <div class="module__full">
+  <div class="module__content">
     <div class="sport--button--container">
       <h1 class="subject">Sport</h1>
       <div class="sport--button">
         <div (click)="navigateSport()" class="sport--button--title">Visit Sport</div>
         <div class="sport--button--svg">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#BBB"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BBB" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <line x1="4" y1="12" x2="20" y2="12"></line>
             <polyline points="14 6 20 12 14 18"></polyline>
           </svg>
@@ -58,11 +38,8 @@
     </div>
 
     <div class="items-row">
-      <app-wide-itm
-        *ngFor="let item of items | slice: 0:3; let i = index"
-        [item]="item"
-        (click)="goToLink(item.link)"
-      ></app-wide-itm>
+      <app-wide-itm *ngFor="let item of items | slice: 0:3; let i = index" [item]="item"
+        (click)="goToLink(item.link)"></app-wide-itm>
     </div>
   </div>
   <div class="glass"></div>

@@ -1,25 +1,22 @@
 <div class="topnav">
+  <div class="mode" (click)="toggleDarkTheme()">
+    <span *ngIf="!light" class="material-symbols-outlined">light_mode</span>
+    <span *ngIf="light" class="material-symbols-outlined">dark_mode</span>
+  </div>
   <div class="menu-items">
     <a href="/home" data-item="Home">Home</a>
     <a href="/news" data-item="News">News</a>
     <a *ngFor="let subject of subjects" href="/news/{{ subject.id }}">{{
       subject.name
-    }}</a>
+      }}</a>
   </div>
   <div class="addItem" (click)="navigateNewItem()">
-    <i class="fa fa-plus"></i>
+    <span class="material-symbols-outlined"> add </span>
     <span class="tooltiptext">Add Item</span>
   </div>
 
   <div class="search-container">
-    <input
-      #box
-      [(ngModel)]="value"
-      (keydown.enter)="navigate()"
-      type="text"
-      placeholder="Search.."
-      name="search"
-    />
+    <input #box [(ngModel)]="value" (keydown.enter)="navigate()" type="text" placeholder="Search.." name="search" />
     <button type="submit" (click)="navigate()">
       <i class="fa fa-search"></i>
     </button>

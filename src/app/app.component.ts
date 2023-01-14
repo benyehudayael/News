@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { DataService } from './services/data.service';
 
 @Component({
@@ -7,9 +7,12 @@ import { DataService } from './services/data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'yael-news';
   timeToOpen = false;
   ScrollTime = true;
+  @HostBinding('style.font-weight') fontWeight = 'normal';
+  
   constructor( private DataService: DataService ){
   }
   openNewItemForm(){
@@ -19,5 +22,11 @@ export class AppComponent {
   closeDialog(){
     this.timeToOpen = false;
     this.ScrollTime = true;
+  }
+  DarkMode(){
+
+  }
+  LightMode(){
+
   }
 }

@@ -1,17 +1,19 @@
-.ajax-section{
-   margin-left: auto;
-   margin-right: auto;
-   color: rgb(242, 245, 248);
-   font-family: 'Open Sans Condensed', sans-serif;
-   display: flex;
-   width: 28%;
-   justify-content: space-around;
+.ajax-section {
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(242, 245, 248);
+  /* font-family: 'Open Sans Condensed', sans-serif; */
+  display: flex;
+  width: 28%;
+  justify-content: space-around;
 }
+
 .city {
   margin-top: 20px;
   border-right: #ffffff;
 }
-.city-icon{
+
+.city-icon {
   width: 13px;
   color: aqua;
 }

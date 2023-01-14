@@ -1,77 +1,81 @@
 :host {
-transition: box-shadow ease-in-out 0.35s;
- margin: 10px;
- cursor: pointer;
- transition: 0.3s;
+  transition: box-shadow ease-in-out 0.35s;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-:host:hover {
-  /* transform: scale(1.001); */
-  /* z-index: 2;
-  box-shadow: 4px 3px 7px -2px rgba(73, 73, 73, 0.397); */
-  -webkit-filter: brightness(120%);
+
+:host:hover>div {
+  background-color: var(--item-hover-bg);
 }
-.item{
- width: 100%; 
- height: 100%; 
- font-family:  Verdana, sans-serif;
- background-color: #00000000;
- overflow: hidden; 
- position: relative;
- font-size: 120%;
- padding-bottom: 1rem;
- border-bottom: 0.5px solid #c3c3c394;
- }
 
- 
+.item {
+  width: 100%;
+  height: 100%;
+  background-color: var(--item-bg);
+  transition: background-color ease-in-out 0.3s;
+  overflow: hidden;
+  position: relative;
+  font-size: 120%;
+  padding-bottom: 1rem;
+  border: 0.5px solid #c3c3c38c;
+}
 
- .imagee{
+
+
+.imagee {
   background-color: #ffffff;
-   width: 100%;
-   height: 45%;
-   position: relative;
-   display: inline-block;
-   overflow: hidden;
-   margin: 0;
- }
- 
- .imagee > img {
-   display: block;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   min-height: 100%;
-   min-width: 100%;
-   transform: translate(-50%, -50%);
- }
-
- .content{
-    padding: 0.25rem;
-    color: #ffffff;
- }
- a:link {
-   text-decoration: none;
- }
- a:hover {
-   color: #90b9e1;
-   -webkit-text-stroke: 0.3px black;
-  
- }
- a{
-   color: #3e92cc;
-  padding-left: 5px;
- }
- .line {
-   margin-top: 6px ;
-   height: 16px;
-   width: 3px;
-   background: #3e92cc;
-   z-index: 1;
+  width: 100%;
+  height: 45%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
 }
-.subjectInfo{
-   display: flex;
-   align-self: flex-end;
-   margin-left: 5px;
-   position: absolute;
-   bottom: 0.2rem;
- 
+
+.imagee>img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  padding: 0.25rem;
+  color: var(--text-color)
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #90b9e1;
+  -webkit-text-stroke: 0.3px black;
+
+}
+
+a {
+  color: #3e92cc;
+  padding-left: 5px;
+}
+
+.line {
+  margin-top: 6px;
+  height: 16px;
+  width: 3px;
+  background: #3e92cc;
+  z-index: 1;
+}
+
+.subjectInfo {
+  display: flex;
+  align-self: flex-end;
+  margin-left: 5px;
+  position: absolute;
+  bottom: 0.2rem;
+
 }

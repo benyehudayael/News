@@ -1,5 +1,5 @@
 <div class="main-container">
-  <app-top-menu (addItemClick)="openNewItemForm()"></app-top-menu>
+  <app-top-menu (addItemClick)="openNewItemForm()" (LightMode)="LightMode()" (DarkMode)="DarkMode()"></app-top-menu>
   <div [class.scroll]="ScrollTime">
     <router-outlet></router-outlet>
     <app-footer></app-footer>

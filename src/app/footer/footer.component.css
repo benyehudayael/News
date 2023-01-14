@@ -1,14 +1,17 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-top: 100px;
+  position: relative;
+  bottom: 0;
+  min-height: 200px;
+  padding: 20px 0 0 170px;
+  background-color: var(--menu-bg-color);
+  text-align: center;
+  color: var(--text-color);
+  box-shadow: 1px 1px 9px 0px var(--menu-shadow-color);
+}
 
-
-  footer {
-    position: absolute;
-    bottom: 0;
-    margin-top: 100px;
-    border-top: 1px solid rgb(105, 105, 105); position: relative; bottom:0; min-height: 200px; padding: 20px 0 0 170px;
-    background-color: rgba(0, 0, 0, 0.596); text-align: center;font-family: 'Courier New', monospace;
-    color: white;
-    box-shadow: 1px 1px 9px 0px rgba(255,255,255,0.57);
-  }
-ul{
-    list-style-type: none;
+ul {
+  list-style-type: none;
 }

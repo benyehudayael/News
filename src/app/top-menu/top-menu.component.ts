@@ -19,24 +19,29 @@ export class TopMenuComponent implements OnInit {
   value = '';
   subjects: Subject[]
   items: Item[];
+  light: boolean = false;
   @Output() addItemClick = new EventEmitter();
-  constructor(private dataService: DataService, private router: Router, private appService:ApprovalService) {}
+
+  constructor(private dataService: DataService, private router: Router, private appService: ApprovalService) { }
 
   navigate() {
     this.appService.updateApprovalMessage(this.value);
     this.router.navigate(['/search']);
   }
-  navigateNewItem(){
+  navigateNewItem() {
     // this.router.navigate(['/NewItemForm']);
     this.addItemClick.emit();
 
   }
-
   ngOnInit(): void {
     //this.appService.currentApprovalStageMessage.subscribe(msg => this.value = msg);
     this.dataService.getSubjects()
-       .subscribe(subjects => {
-           this.subjects = subjects.filter(x => x.showInMenu);
-         });
+      .subscribe(subjects => {
+        this.subjects = subjects.filter(x => x.showInMenu);
+      });
+  }
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('light-theme');
+    this.light = !this.light;
   }
 }

@@ -1,56 +1,58 @@
-
 .module__content {
   margin: 0 auto;
   padding: 0 1rem;
   max-width: 80rem
 }
-.module__full{
-  min-width: 80rem
+
+app-weather {
+  height: 180px;
+  margin-bottom: 2rem;
 }
- app-weather{
- height:180px;
- margin-bottom: 2rem;
-} 
-.welcomeANDtime{
-display: flex; 
-flex-flow: row; 
-justify-content: space-between;
-padding: 1.5rem;}
-#welcome{
+
+.welcomeANDtime {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+#welcome {
+  font-size: 31px;
+  color: var(--text-color);
+  margin-top: 7%;
+}
+
+#time {
   font-size: 1.375rem;
-  font-weight: bold;
-  color: rgb(252, 252, 252);
   margin-top: 8%;
+  color: #939393;
+  font-weight: normal;
 }
-#time{
-    font-size: 1.375rem;
-    margin-top: 8%;
-    color: #dadada80;
-    font-weight: normal;
-}
-* {box-sizing: border-box;
+
+* {
+  box-sizing: border-box;
   display: block;
   margin-bottom: 7px;
 }
-body {
-  font-family: 'acta-display', serif;
-   }
-.threeItems{
+
+/*body {
+   font-family: 'acta-display', serif; 
+}*/
+
+.threeItems {
   display: flex;
   justify-content: left;
 }
-   
+
 
 .imageBG {
   width: 100%;
-  height:600px;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
-  border-top:0.3px solid rgb(105, 105, 105);
-  border-bottom:0.3px solid rgb(105, 105, 105);
+  height: 517px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
   position: relative;
   background-size: cover;
   z-index: 1;
-  background:  inherit;
+  background: inherit;
   overflow: hidden;
   padding: 3%;
 }
@@ -58,57 +60,67 @@ body {
 .imageBG:before {
   content: "";
   position: absolute;
-  background:  url("https://ychef.files.bbci.co.uk/1200x675/p08h02kk.jpg");
+  background: var(--wide-items-img);
   background-size: cover;
   z-index: -1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  box-shadow: inset 0 0 2000px var(--bkg-color);
   filter: blur(5px);
   margin: -20px;
 }
-.subject{
-  color: #fff;
+
+.subject {
+  color: var(--text-color);
   font-size: 50px;
-}   
+}
+
 .sport--button--container {
   display: flex;
   justify-content: space-between;
   margin-left: 10px;
-  margin-right: 10px;}
-.sport--button--container .sport--button{
-    font-family:  Verdana, sans-serif;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 25px;
-    height: 42px;
-    width: 183px;
-    border: 1.5px solid white;
-    border-radius: 18px;
-    line-height: 32px;
-    transition: background .3s ease;
+  margin-right: 10px;
+  align-items: center;
 }
+
+.sport--button--container .sport--button {
+  /* font-family: Verdana, sans-serif; */
+  color: var(--text-color);
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  height: 42px;
+  width: 183px;
+  border: 1.5px solid white;
+  border-radius: 18px;
+  line-height: 32px;
+  transition: background-color .3s ease;
+}
+
 .sport--button:hover {
-background-color: #515052a8;
-cursor: pointer;
+  background-color: #515052a8;
+  cursor: pointer;
 }
+
 .sport--button:hover .sport--button--svg {
   margin-right: 10px;
 }
-.sport--button--title{
+
+.sport--button--title {
   float: left;
   margin-left: 12px;
   margin-top: 2.5px;
 }
-.sport--button--svg{
+
+.sport--button--svg {
   float: right;
   margin-right: 12px;
   margin-top: 8px;
   transition: margin-right .3s ease-in-out;
 }
+
 .items-row {
   height: 300px;
   display: flex;
@@ -116,30 +128,34 @@ cursor: pointer;
   margin-left: auto;
   margin-right: auto;
 }
-app-wide-itm{
+
+app-wide-itm {
   width: 32%;
   height: fit-content;
 }
-#itemsRowSubject{
+
+#itemsRowSubject {
   width: 100%;
   display: block;
   margin-bottom: 2rem;
 }
-app-item{
-  height: 300px;
+
+app-item {
+  height: 200px;
   width: 260px;
 }
-h1{
-  font-family:  Verdana, sans-serif;
+
+h1 {
+  /* font-family: Verdana, sans-serif; */
   font-size: bold;
-  
+
 }
+
 h2 {
   font-size: 1.9em;
   font-weight: normal;
   margin-bottom: 1rem;
   margin-left: 10px;
-  font-family:  Verdana, sans-serif;
-  font-weight: bold;
-  color: #ffffff;
+  /* font-family: Verdana, sans-serif; */
+  color: var(--text-color);
 }
