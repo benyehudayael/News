@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import * as moment from 'moment';
 import { Item } from 'src/model/item';
 import { DataService } from '../services/data.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -25,7 +27,7 @@ export class HomeComponent implements OnInit {
   /*Ceck this!*/
   content: any;
   constructor(
-    private dataService : DataService) { }
+    private dataService : DataService, private router: Router) { }
 
   ngOnInit(): void {
     this.date = moment().format('dddd, DD MMMM');
@@ -53,6 +55,9 @@ export class HomeComponent implements OnInit {
 
   currentSlide(n: number) {
     this.slideIndex = n;
+  }
+  navigateSport(){
+    this.router.navigateByUrl('/news/250c59d7-ca7e-4d07-8dff-572466408efd');
   }
   private loadItems() {
     this.dataService.getItems(this.pageIndex, this.pageSize, this.sid, this.freeText)
