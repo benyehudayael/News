@@ -48,7 +48,8 @@ a:link {
 h2 {
   color: var(--text-color);
   margin: 0;
-  font-size: 23px;
+  font-size: 116%;
+  height: 80px;
   padding-left: 0.5em;
   padding-right: 0.5em;
   overflow: hidden;

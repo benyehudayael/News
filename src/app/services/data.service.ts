@@ -10,16 +10,16 @@ import { Subject } from 'src/model/Subject';
 export class DataService {
   constructor(private http: HttpClient) { }
 
-  getItems(pageIndex: number, pageSize: number, subjectId: string | null, freeText: string) : Observable<Item[]> {
-    return this.http.get<Item[]>('https://localhost:7071/api/item?pageSize=' 
-      + pageSize + '&pageIndex=' + pageIndex + (subjectId != null ? '&sid=' + subjectId : '')  + '&ft='+ freeText);
+  getItems(pageIndex: number, pageSize: number, subjectId: string | null, freeText: string): Observable<Item[]> {
+    return this.http.get<Item[]>('https://localhost:7071/api/item?pageSize='
+      + pageSize + '&pageIndex=' + pageIndex + (subjectId != null ? '&sid=' + subjectId : '') + '&ft=' + freeText);
   }
 
-  addNewItem(item: Item) : Observable<boolean> {
+  addNewItem(item: Item): Observable<boolean> {
     return this.http.post<boolean>('https://localhost:7071/api/item', item);
   }
 
-  getSubjects() : Observable<Subject[]> {
+  getSubjects(): Observable<Subject[]> {
     return this.http.get<Subject[]>('https://localhost:7071/api/subject');
   }
 }
