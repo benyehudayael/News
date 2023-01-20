@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
     this.loadItems();
     this.loadItemsNews();
     this.loadItemsSport();
-    this.loadItemsReel();
+    this.loadItemsHealth();
 
   }
   plusSlides(n: number) {
@@ -56,29 +56,29 @@ export class HomeComponent implements OnInit {
   currentSlide(n: number) {
     this.slideIndex = n;
   }
-  navigateSport() {
-    this.router.navigateByUrl('/news/250c59d7-ca7e-4d07-8dff-572466408efd');
+  navigateEnvierment() {
+    this.router.navigateByUrl('/news/B2D99701-B1FD-4ED2-85E6-D169CD26A142');
   }
   private loadItems() {
-    this.dataService.getItems(this.pageIndex, this.pageSize, this.sid, this.freeText)
+    this.dataService.getItems(this.pageIndex, this.pageSize, 'B2D99701-B1FD-4ED2-85E6-D169CD26A142', this.freeText)
       .subscribe(items => {
         this.items = this.items.concat(items);
       });
   }
   private loadItemsNews() {
-    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, this.sid, this.freeText)
+    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, '999869D9-8083-43B8-A89A-228CADA6BFA3', this.freeText)
       .subscribe(items => {
         this.itemsNews = items;
       });
   }
   private loadItemsSport() {
-    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, '250C59D7-CA7E-4D07-8DFF-572466408EFD', this.freeText)
+    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, '8F3801EE-C813-4719-A800-9C0851C3D22B', this.freeText)
       .subscribe(items => {
         this.itemsSport = items;
       });
   }
-  private loadItemsReel() {
-    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, this.sid, this.freeText)
+  private loadItemsHealth() {
+    this.dataService.getItems(this.pageIndexNews, this.pageSizeNews, 'B6B1CA04-4998-4BAD-B9D4-36200103C73F', this.freeText)
       .subscribe(items => {
         this.itemsReel = items;
       });

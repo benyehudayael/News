@@ -13,9 +13,9 @@ import { ApprovalService } from '../services/approval.service';
 export class SearchComponent implements OnInit {
   inputValue: string = '';
   items: Item[] = [];
-  
-  constructor(private router: Router, private dataService: DataService, private appService:ApprovalService) {
-    
+
+  constructor(private router: Router, private dataService: DataService, private appService: ApprovalService) {
+
   }
 
   ngOnInit(): void {
@@ -23,12 +23,12 @@ export class SearchComponent implements OnInit {
     this.loadItems(this.inputValue);
     //this.inputValue = this.router.getCurrentNavigation()?.extras.state?.['searchKey']; 
   }
-  loadItems(msg:string){
+  loadItems(msg: string) {
     this.inputValue = msg;
     this.dataService.getItems(1, 9, '', this.inputValue)
-    .subscribe((items) => {
-      this.items = items;
-    });
+      .subscribe((items) => {
+        this.items = items;
+      });
   }
-  
+
 }

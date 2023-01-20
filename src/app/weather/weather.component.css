@@ -2,10 +2,10 @@
   margin-left: auto;
   margin-right: auto;
   color: rgb(242, 245, 248);
-  /* font-family: 'Open Sans Condensed', sans-serif; */
   display: flex;
   width: 28%;
   justify-content: space-around;
+  color: var(--text-color);
 }
 
 .city {
@@ -15,5 +15,4 @@
 
 .city-icon {
   width: 13px;
-  color: aqua;
 }
